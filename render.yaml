@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: coldtrace-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: COLDTRACE_DATABASE_URL
+        value: sqlite:///./coldtrace.db
+      - key: COLDTRACE_CORS_ORIGINS
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.12.7"

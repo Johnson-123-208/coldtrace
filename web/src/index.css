@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --paper: #fcfcfc;
+  --surface: #ffffff;
+  --ink: #0c3474;
+  --accent: #2e9cf4;
+  --line: rgb(12 52 116 / 0.14);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-family: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgb(46 156 244 / 0.22);
+}
